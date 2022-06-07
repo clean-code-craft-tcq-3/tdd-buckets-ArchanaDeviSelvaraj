@@ -1,4 +1,5 @@
 #include <assert.h>
+#include "CurrentMeasurementRange.h"
 
 int main()
 {
