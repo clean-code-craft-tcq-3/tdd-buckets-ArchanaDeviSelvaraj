@@ -1,1 +1,1 @@
-int DetectContinuousRanges(int currentsamplesarray);
+int DetectContinuousRanges(int currentsamplesarray[]);
