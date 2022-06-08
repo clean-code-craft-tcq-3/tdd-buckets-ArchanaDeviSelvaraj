@@ -1,7 +1,5 @@
 #include "CurrentMeasurementRange.h"
 
-int rangecount=0,consecutivecount=0;
-
 int cmpfunc (const void * value1, const void * value2) 
 {
    return ( *(int*)value1 - *(int*)value2 );
@@ -16,7 +14,7 @@ int isConsecutive(int diff)
    return consecutive;
 }
 
-void FindNumberofRanges(int isconsecutive, int consecutivecount,int index,int currentsamplesarray[],int startvalue,int endvalue)
+void FindNumberofRanges(int isconsecutive, int consecutivecount,int index,int currentsamplesarray[],int startvalue,int endvalue,int rangecount)
 {
    if(isconsecutive==1)
      {
@@ -32,6 +30,7 @@ void FindNumberofRanges(int isconsecutive, int consecutivecount,int index,int cu
         endvalue = currentsamplesarray[index];
         consecutivecount=0;
      }
+   return rangecount;
 }
 
 int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
@@ -45,7 +44,7 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
       int diff = currentsamplesarray[index+1] - currentsamplesarray[index];
       int isconsecutive=0;
       isconsecutive = isConsecutive(diff);
-      FindNumberofRanges(isconsecutive,consecutivecount,index,currentsamplesarray,startvalue,endvalue);
+      rangecount = FindNumberofRanges(isconsecutive,consecutivecount,index,currentsamplesarray,startvalue,endvalue,rangecount);
   }
   printf("Total number of continuous ranges detected : %d\n",rangecount);   
   return rangecount;
