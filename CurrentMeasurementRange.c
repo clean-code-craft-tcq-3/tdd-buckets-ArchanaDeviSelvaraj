@@ -39,7 +39,6 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
         endvalue = currentsamplesarray[index];
         consecutivecount=0;
      }
-   return rangecount;
   }
   printf("Total number of continuous ranges detected : %d\n",rangecount);   
   return rangecount;
