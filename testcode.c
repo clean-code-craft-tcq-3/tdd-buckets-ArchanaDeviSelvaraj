@@ -14,5 +14,6 @@ printf("\nTest case 2\n");
 int samplesarray2[] = {3, 30, 5, 7, 10, 15, 12, 20};
 int arraysize2 = sizeof(samplesarray2) / sizeof(samplesarray2[0]);
 //assert(DetectContinuousRanges(samplesarray2,arraysize2) == 0);
+  DetectContinuousRanges(samplesarray2,arraysize2);
 return 0;
 }
