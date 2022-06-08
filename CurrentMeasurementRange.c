@@ -1,6 +1,9 @@
 #include "CurrentMeasurementRange.h"
 
-int cmpfunc (const void * value1, const void * value2) {
+int startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0],rangecount=0,consecutivecount=0;
+
+int cmpfunc (const void * value1, const void * value2) 
+{
    return ( *(int*)value1 - *(int*)value2 );
 }
 //TDD Step4:New functions added to refactor code and to reduce CCN value
@@ -13,18 +16,9 @@ int isConsecutive(int diff)
    return consecutive;
 }
 
-int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
+void FindNumberofRanges(int isconsecutive, int consecutivecount,int index)
 {
-  //TDD Step3:Code Implementation done to make the test pass
-  //as expected at end of step3 test case got passed
-  int startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0],rangecount=0,consecutivecount=0;
-  qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
-  for( int index = 0 ; index < arraysize; index++ ) 
-  {   
-      int diff = currentsamplesarray[index+1] - currentsamplesarray[index];
-      int isconsecutive=0;
-      isconsecutive = isConsecutive(diff);
-     if(isconsecutive==1)
+   if(isconsecutive==1)
      {
         consecutivecount++;
         endvalue = currentsamplesarray[index+1];
@@ -38,6 +32,19 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
         endvalue = currentsamplesarray[index];
         consecutivecount=0;
      }
+}
+
+int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
+{
+  //TDD Step3:Code Implementation done to make the test pass
+  //as expected at end of step3 test case got passed
+  qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
+  for( int index = 0 ; index < arraysize; index++ ) 
+  {   
+      int diff = currentsamplesarray[index+1] - currentsamplesarray[index];
+      int isconsecutive=0;
+      isconsecutive = isConsecutive(diff);
+      FindNumberofRanges(isconsecutive,consecutivecount,index);
   }
   printf("Total number of continuous ranges detected : %d\n",rangecount);   
   return rangecount;
