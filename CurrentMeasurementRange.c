@@ -9,7 +9,7 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
   //TDD step3: Implementation and refactoring
   int startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0],rangecount=0,consecutivecount=0;
   qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
-  for( int n = 0 ; n < arraysize-1; n++ ) 
+  for( int n = 0 ; n < arraysize; n++ ) 
   {   
       int diff = currentsamplesarray[n+1] - currentsamplesarray[n];
       int consecutive=0;
