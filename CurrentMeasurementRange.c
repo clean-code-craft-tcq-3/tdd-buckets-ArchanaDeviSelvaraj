@@ -13,7 +13,7 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
   {   
       int diff = currentsamplesarray[n+1] - currentsamplesarray[n];
       printf("Diff value %d\n",diff);
-      if(diff==0 || diff==1)
+      if((diff==0) || (diff==1))
       {
        consecutive=1;
        printf("consecutive value %d\n",consecutive);
