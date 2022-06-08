@@ -6,7 +6,7 @@ int cmpfunc (const void * a, const void * b) {
 
 int DetectContinuousRanges(int currentsamplesarray[])
 {
-  int arraysize = sizeof(currentsamplesarray);
+  int arraysize = sizeof(currentsamplesarray[]);
    printf("Size of the array is: %d\n", arraysize);
   qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
   for( int n = 0 ; n < arraysize; n++ ) {   
