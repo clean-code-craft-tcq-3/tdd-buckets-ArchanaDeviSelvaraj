@@ -14,7 +14,7 @@ int isConsecutive(int diff)
    return consecutive;
 }
 
-int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
+int DetectandPrintContinuousRanges(int currentsamplesarray[],int arraysize)
 {
   //TDD Step3:Code Implementation done to make the test pass
   //as expected at end of step3 test case got passed
