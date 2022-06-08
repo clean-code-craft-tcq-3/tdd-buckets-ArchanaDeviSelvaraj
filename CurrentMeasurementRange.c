@@ -14,7 +14,7 @@ int isConsecutive(int diff)
    return consecutive;
 }
 
-void FindNumberofRanges(int isconsecutive, int consecutivecount,int index,int currentsamplesarray[],int startvalue,int endvalue,int rangecount)
+int FindNumberofRanges(int isconsecutive, int consecutivecount,int index,int currentsamplesarray[],int startvalue,int endvalue,int rangecount)
 {
    if(isconsecutive==1)
      {
