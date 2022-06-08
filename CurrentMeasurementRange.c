@@ -1,7 +1,5 @@
 #include "CurrentMeasurementRange.h"
 
-int rangecount=0,consecutivecount=0,startvalue=0,endvalue=0;
-
 int cmpfunc (const void * value1, const void * value2) 
 {
    return ( *(int*)value1 - *(int*)value2 );
@@ -40,18 +38,16 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
   //TDD Step3:Code Implementation done to make the test pass
   //as expected at end of step3 test case got passed
   qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
-  startvalue=currentsamplesarray[0];
-  endvalue=currentsamplesarray[0];
-  int rangecountvalue=0;
+  int rangecount=0,consecutivecount=0,startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0];
   for( int index = 0 ; index < arraysize; index++ ) 
   {   
       int diff = currentsamplesarray[index+1] - currentsamplesarray[index];
       int isconsecutive=0;
       isconsecutive = isConsecutive(diff);
-      rangecountvalue = FindNumberofRanges(isconsecutive,consecutivecount,index,currentsamplesarray,startvalue,endvalue,rangecount);
+      rangecount = FindNumberofRanges(isconsecutive,consecutivecount,index,currentsamplesarray,startvalue,endvalue,rangecount);
   }
   printf("Total number of continuous ranges detected : %d\n",rangecount);   
-  return rangecountvalue;
+  return rangecount;
   //TDD Step2 : Just added function to make code compile
   //end of step2 as expected test failed since actual code implementation not yet done : Assertion `DetectContinuousRanges(currentsamplesarray) == 2' failed.
 }
