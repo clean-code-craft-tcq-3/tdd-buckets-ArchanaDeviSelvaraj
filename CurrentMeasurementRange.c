@@ -17,7 +17,7 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
       }
      if(consecutive)
      {
-        cosecutivecount++;
+        consecutivecount++;
      }
      else
      {
@@ -25,7 +25,7 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
         rangecount++;
      }
    }
-  printf("Consecutive count %d\n",cosecutivecount);
+  printf("Consecutive count %d\n",consecutivecount);
   printf("Rangecount count %d\n",rangecount);   
   return rangecount;
   //TDD Step2 : Just added function to make code compile
