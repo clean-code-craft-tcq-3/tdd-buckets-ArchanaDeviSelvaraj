@@ -1,6 +1,6 @@
 #include "CurrentMeasurementRange.h"
 
-int rangecount=0,consecutivecount=0;
+int rangecount=0,consecutivecount=0,startvalue=0,endvalue=0;
 
 int cmpfunc (const void * value1, const void * value2) 
 {
@@ -40,7 +40,8 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
   //TDD Step3:Code Implementation done to make the test pass
   //as expected at end of step3 test case got passed
   qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
-  int startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0];
+  startvalue=currentsamplesarray[0];
+  endvalue=currentsamplesarray[0];
   for( int index = 0 ; index < arraysize; index++ ) 
   {   
       int diff = currentsamplesarray[index+1] - currentsamplesarray[index];
