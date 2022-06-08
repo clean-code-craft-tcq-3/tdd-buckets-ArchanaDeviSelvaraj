@@ -42,15 +42,16 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
   qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
   startvalue=currentsamplesarray[0];
   endvalue=currentsamplesarray[0];
+  int rangecountvalue=0;
   for( int index = 0 ; index < arraysize; index++ ) 
   {   
       int diff = currentsamplesarray[index+1] - currentsamplesarray[index];
       int isconsecutive=0;
       isconsecutive = isConsecutive(diff);
-      rangecount = FindNumberofRanges(isconsecutive,consecutivecount,index,currentsamplesarray,startvalue,endvalue,rangecount);
+      rangecountvalue = FindNumberofRanges(isconsecutive,consecutivecount,index,currentsamplesarray,startvalue,endvalue,rangecount);
   }
   printf("Total number of continuous ranges detected : %d\n",rangecount);   
-  return rangecount;
+  return rangecountvalue;
   //TDD Step2 : Just added function to make code compile
   //end of step2 as expected test failed since actual code implementation not yet done : Assertion `DetectContinuousRanges(currentsamplesarray) == 2' failed.
 }
