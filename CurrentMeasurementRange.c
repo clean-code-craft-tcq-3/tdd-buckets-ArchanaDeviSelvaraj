@@ -21,9 +21,9 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
   for( int index = 0 ; index < arraysize; index++ ) 
   {   
       int diff = currentsamplesarray[index+1] - currentsamplesarray[index];
-      int consecutive=0;
-      consecutive = isConsecutive(diff);
-     if(consecutive==1)
+      int isconsecutive=0;
+      isconsecutive = isConsecutive(diff);
+     if(isconsecutive==1)
      {
         consecutivecount++;
         endvalue = currentsamplesarray[index+1];
