@@ -12,6 +12,7 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
   for( int n = 0 ; n < arraysize; n++ ) 
   {   
       int diff = currentsamplesarray[n+1] - currentsamplesarray[n];
+      printf("Diff value %d\n",diff);
       if(diff==0 || diff==1)
       {
        consecutive=1;
