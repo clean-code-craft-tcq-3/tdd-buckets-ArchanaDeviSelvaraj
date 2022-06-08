@@ -23,7 +23,7 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
    }
   printf("Consecutive count %d\n",consecutive);
   printf("Rangecount count %d\n",rangecount);   
-  return 0;
+  return rangecount;
   //TDD Step2 : Just added function to make code compile
   //end of step2 as expected test failed since actual code implementation not yet done : Assertion `DetectContinuousRanges(currentsamplesarray) == 2' failed.
 }
