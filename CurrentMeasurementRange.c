@@ -6,7 +6,7 @@ int cmpfunc (const void * a, const void * b) {
 
 int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
 {
-  //TDD step3: Implementation and refactoring
+  //TDD step3:Code Implementation done to make the test pass
   int startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0],rangecount=0,consecutivecount=0;
   qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
   for( int n = 0 ; n < arraysize; n++ ) 
