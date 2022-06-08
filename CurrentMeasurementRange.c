@@ -16,7 +16,7 @@ int isConsecutive(int diff)
    return consecutive;
 }
 
-void FindNumberofRanges(int isconsecutive, int consecutivecount,int index,int currentsamplesarray[],int endvalue,int endvalue)
+void FindNumberofRanges(int isconsecutive, int consecutivecount,int index,int currentsamplesarray[],int startvalue,int endvalue)
 {
    if(isconsecutive==1)
      {
@@ -45,7 +45,7 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
       int diff = currentsamplesarray[index+1] - currentsamplesarray[index];
       int isconsecutive=0;
       isconsecutive = isConsecutive(diff);
-      FindNumberofRanges(isconsecutive,consecutivecount,index,currentsamplesarray[],startvalue,endvalue);
+      FindNumberofRanges(isconsecutive,consecutivecount,index,currentsamplesarray,startvalue,endvalue);
   }
   printf("Total number of continuous ranges detected : %d\n",rangecount);   
   return rangecount;
