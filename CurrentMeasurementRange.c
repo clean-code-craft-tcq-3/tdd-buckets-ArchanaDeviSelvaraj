@@ -6,22 +6,26 @@ int cmpfunc (const void * a, const void * b) {
 
 int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
 {
-  int diff = 0,consecutive=0,startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0],rangecount=0;
+  int diff = 0,consecutive=0,startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0],rangecount=0,consecutivecount=0;
   qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
   for( int n = 0 ; n < arraysize; n++ ) 
   {   
       diff = currentsamplesarray[n+1] - currentsamplesarray[n];
       if(diff==0 || diff==1)
       {
-       consecutive++;
+       consecutive=1;
       }
+     if(consecutive)
+     {
+        cosecutivecount++;
+     }
      else
      {
         endvalue = currentsamplesarray[n];
         rangecount++;
      }
    }
-  printf("Consecutive count %d\n",consecutive);
+  printf("Consecutive count %d\n",cosecutivecount);
   printf("Rangecount count %d\n",rangecount);   
   return rangecount;
   //TDD Step2 : Just added function to make code compile
