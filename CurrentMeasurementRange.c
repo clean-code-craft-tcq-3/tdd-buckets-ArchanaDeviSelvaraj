@@ -14,9 +14,18 @@ int isConsecutive(int diff)
    return consecutive;
 }
 
-int FindNumberofRanges(int isconsecutive, int consecutivecount,int index,int currentsamplesarray[],int startvalue,int endvalue,int rangecount)
+int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
 {
-   if(isconsecutive==1)
+  //TDD Step3:Code Implementation done to make the test pass
+  //as expected at end of step3 test case got passed
+  qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
+  int rangecount=0,consecutivecount=0,startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0];
+  for( int index = 0 ; index < arraysize; index++ ) 
+  {   
+      int diff = currentsamplesarray[index+1] - currentsamplesarray[index];
+      int isconsecutive=0;
+      isconsecutive = isConsecutive(diff);
+      if(isconsecutive==1)
      {
         consecutivecount++;
         endvalue = currentsamplesarray[index+1];
@@ -31,20 +40,6 @@ int FindNumberofRanges(int isconsecutive, int consecutivecount,int index,int cur
         consecutivecount=0;
      }
    return rangecount;
-}
-
-int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
-{
-  //TDD Step3:Code Implementation done to make the test pass
-  //as expected at end of step3 test case got passed
-  qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
-  int rangecount=0,consecutivecount=0,startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0];
-  for( int index = 0 ; index < arraysize; index++ ) 
-  {   
-      int diff = currentsamplesarray[index+1] - currentsamplesarray[index];
-      int isconsecutive=0;
-      isconsecutive = isConsecutive(diff);
-      rangecount = FindNumberofRanges(isconsecutive,consecutivecount,index,currentsamplesarray,startvalue,endvalue,rangecount);
   }
   printf("Total number of continuous ranges detected : %d\n",rangecount);   
   return rangecount;
