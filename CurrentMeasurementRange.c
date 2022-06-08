@@ -31,7 +31,7 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
         printf("rangecount value %d\n",rangecount);
         printf("startvalue %d\n",startvalue);
         printf("endvalue %d\n",endvalue);
-        printf("Number of readings %d\n",consecutivecount);
+        printf("Number of readings %d\n",consecutivecount+1);
         startvalue = currentsamplesarray[n+1];
         endvalue = currentsamplesarray[n];
         consecutivecount=0;
