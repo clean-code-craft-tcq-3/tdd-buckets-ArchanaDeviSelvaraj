@@ -16,7 +16,7 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
       {
        consecutive=1;
       }
-     if(consecutive)
+     if(consecutive==1)
      {
         consecutivecount++;
         //endvalue = currentsamplesarray[n+1];
