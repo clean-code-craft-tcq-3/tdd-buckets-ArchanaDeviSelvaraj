@@ -6,10 +6,14 @@ int cmpfunc (const void * a, const void * b) {
 
 int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
 {
+  int diff = 0,consecutive=0;
   qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
   for( int n = 0 ; n < arraysize; n++ ) 
   {   
-      printf("%d ", currentsamplesarray[n]);
+      diff = currentsamplesarray[n+1] - currentsamplesarray[n];
+      if(diff==0 || diff==1)
+       consecutive++;
+     printf("Consecutive count %d\n",consecutive);
    }
   return 0;
   //TDD Step2 : Just added function to make code compile
