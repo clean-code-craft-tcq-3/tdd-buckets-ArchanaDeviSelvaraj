@@ -3,10 +3,18 @@
 int cmpfunc (const void * value1, const void * value2) {
    return ( *(int*)value1 - *(int*)value2 );
 }
+//TDD Step4:New functions added to refactor code and to reduce CCN value
+
+int isConsecutive(int diff)
+{
+   if((diff==0) || (diff==1))
+       consecutive=1;
+   return consecutive;
+}
 
 int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
 {
-  //TDD step3:Code Implementation done to make the test pass
+  //TDD Step3:Code Implementation done to make the test pass
   //as expected at end of step3 test case got passed
   int startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0],rangecount=0,consecutivecount=0;
   qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
@@ -14,10 +22,7 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
   {   
       int diff = currentsamplesarray[index+1] - currentsamplesarray[index];
       int consecutive=0;
-      if((diff==0) || (diff==1))
-      {
-       consecutive=1;
-      }
+      consecutive = isConsecutive(diff);
      if(consecutive==1)
      {
         consecutivecount++;
