@@ -12,7 +12,7 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
   qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
   for( int index = 0 ; index < arraysize; index++ ) 
   {   
-      int diff = currentsamplesarray[n+1] - currentsamplesarray[n];
+      int diff = currentsamplesarray[index+1] - currentsamplesarray[index];
       int consecutive=0;
       if((diff==0) || (diff==1))
       {
@@ -21,15 +21,15 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
      if(consecutive==1)
      {
         consecutivecount++;
-        endvalue = currentsamplesarray[n+1];
+        endvalue = currentsamplesarray[index+1];
      }
      else if(consecutivecount!=0)
      {
         rangecount++;
         printf("Range%d : %d-%d\n",rangecount,startvalue,endvalue);
         printf("Number of readings detected in the above range : %d\n",consecutivecount+1);
-        startvalue = currentsamplesarray[n+1];
-        endvalue = currentsamplesarray[n];
+        startvalue = currentsamplesarray[index+1];
+        endvalue = currentsamplesarray[index];
         consecutivecount=0;
      }
   }
