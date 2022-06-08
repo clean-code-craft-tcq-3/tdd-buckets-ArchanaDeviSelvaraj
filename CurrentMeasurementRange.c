@@ -7,12 +7,13 @@ int cmpfunc (const void * a, const void * b) {
 int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
 {
   //TDD step3: Implementation and refactoring
-  int startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0],rangecount=0,consecutivecount=0;
+  int startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0],rangecount=0;
   qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
   for( int n = 0 ; n < arraysize; n++ ) 
   {   
       int diff = currentsamplesarray[n+1] - currentsamplesarray[n];
       int consecutive=0;
+      int consecutivecount=0;
       //printf("Diff value %d\n",diff);
       if((diff==0) || (diff==1))
       {
@@ -25,7 +26,7 @@ int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
         //printf("consecutivecount value %d\n",consecutivecount);
         endvalue = currentsamplesarray[n+1];
      }
-     else
+     else if(consecutivecount!=0)
      {
         rangecount++;
         printf("rangecount value %d\n",rangecount);
