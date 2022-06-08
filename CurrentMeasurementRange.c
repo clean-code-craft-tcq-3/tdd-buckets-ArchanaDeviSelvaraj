@@ -1,7 +1,7 @@
 #include "CurrentMeasurementRange.h"
 
-int cmpfunc (const void * a, const void * b) {
-   return ( *(int*)a - *(int*)b );
+int cmpfunc (const void * value1, const void * value2) {
+   return ( *(int*)value1 - *(int*)value2 );
 }
 
 int DetectContinuousRanges(int currentsamplesarray[],int arraysize)
