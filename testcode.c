@@ -18,8 +18,8 @@ int samplesarray2[] = {3, 30, 5, 7, 10, 15, 12, 20};
 int arraysize2 = sizeof(samplesarray2) / sizeof(samplesarray2[0]);
 assert(DetectRangecountandPrintdetails(samplesarray2,arraysize2) == 0);
 printf("\nTest case 4");
-int samplesarray2[] = {-3, -30, -5, -7, -10, -11, -12, 20, -6};
-int arraysize2 = sizeof(samplesarray2) / sizeof(samplesarray2[0]);
-assert(DetectRangecountandPrintdetails(samplesarray2,arraysize2) == 0);
+int samplesarray3[] = {-3, -30, -5, -7, -10, -11, -12, 20, -6};
+int arraysize3 = sizeof(samplesarray3) / sizeof(samplesarray3[0]);
+assert(DetectRangecountandPrintdetails(samplesarray3,arraysize3) == 2);
 return 0;
 }
