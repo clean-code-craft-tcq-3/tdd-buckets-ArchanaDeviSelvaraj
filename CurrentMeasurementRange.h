@@ -1,3 +1,3 @@
 #include <stdio.h>
 #include <stdlib.h>
-int DetectandPrintContinuousRanges(int currentsamplesarray[],int arraysize);
+int DetectRangecountandPrintdetails(int currentsamplesarray[],int arraysize);
