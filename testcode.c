@@ -7,7 +7,7 @@ int main()
 printf("Test case 1\n");
 int samplesarray[] = {4,5};
 int arraysize = sizeof(samplesarray) / sizeof(samplesarray[0]);
-assert(DetectandPrintContinuousRanges(samplesarray,arraysize) == 2);
+assert(DetectandPrintContinuousRanges(samplesarray,arraysize) == 1);
 //End of step 1 error observed as expected : error: ‘DetectContinuousRanges’ was not declared in this scope
 printf("\nTest case 2\n");
 int samplesarray1[] = {3, 3, 5, 4, 10, 11, 12};
