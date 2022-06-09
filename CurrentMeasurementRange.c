@@ -14,6 +14,16 @@ int isConsecutive(int diff)
    return consecutive;
 }
 
+int calculaterangecount(int consecutivecount,int rangecount,int startvalue,int endvalue,int index)
+{
+   if(consecutivecount!=0)
+     {
+        rangecount++;
+        printrangedetails(startvalue,endvalue,consecutivecount);
+      }
+   return rangecount;
+  }
+
 void printrangedetails(int startvalue,int endvalue,int consecutivecount)
 {
    printf("\nRange,Readings\n");
@@ -43,14 +53,13 @@ int DetectRangecountandPrintdetails(int currentsamplesarray[],int arraysize)
         consecutivecount++;
         endvalue = currentsamplesarray[index+1];
      }
-     else if(consecutivecount!=0)
+     else 
      {
-        rangecount++;
-        printrangedetails(startvalue,endvalue,consecutivecount);
+        rangecount = calculaterangecount(consecutivecount,rangecount,startvalue,endvalue,index);
         startvalue = currentsamplesarray[index+1];
         endvalue = currentsamplesarray[index];
         consecutivecount=0;
-     }  
+     }
   }
   printnorangefound(rangecount);
   return rangecount;
