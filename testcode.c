@@ -24,7 +24,7 @@ assert(DetectRangecountandPrintdetails(samplesarray3,arraysize3) == 2);
 printf("\nTest case 5");
 int samplesarray4[] = {-2,-1,0,1,2,3,4,5};
 int arraysize4 = sizeof(samplesarray4) / sizeof(samplesarray4[0]);
-assert(DetectRangecountandPrintdetails(samplesarray3,arraysize3) == 1);
+assert(DetectRangecountandPrintdetails(samplesarray4,arraysize4) == 1);
   
 //Testcase to check isConsecutive fucntion
 assert(isConsecutive(0) == 1);
