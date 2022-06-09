@@ -17,7 +17,7 @@ int isConsecutive(int diff)
 void printrangedetails(int startvalue,int endvalue,int consecutivecount)
 {
    printf("\nRange,Readings\n");
-   printf("%d-%d,  %d\n",startvalue,endvalue,consecutivecount+1);
+   printf("%d-%d,  %d",startvalue,endvalue,consecutivecount+1);
 }
 
 int calculaterangecount(int consecutivecount,int rangecount,int startvalue,int endvalue,int index)
