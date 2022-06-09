@@ -27,7 +27,7 @@ void printnorangefound(int rangecount)
 }
                 
 
-int DetectandPrintContinuousRanges(int currentsamplesarray[],int arraysize)
+int DetectRangecountandPrintdetails(int currentsamplesarray[],int arraysize)
 {
   //TDD Step3:Code Implementation done to make the test pass
   //as expected at end of step3 test case got passed
