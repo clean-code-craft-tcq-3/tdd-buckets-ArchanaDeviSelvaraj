@@ -19,6 +19,12 @@ void printrangedetails(int startvalue,int endvalue,int consecutivecount)
    printf("\nRange,Readings\n");
    printf("%d-%d,  %d\n",startvalue,endvalue,consecutivecount+1);
 }
+
+void printnorangefound(int rangecount)
+{
+   if(rangecount==0)
+   printf("\n No Continuous Range detected");
+}
                 
 
 int DetectandPrintContinuousRanges(int currentsamplesarray[],int arraysize)
@@ -46,6 +52,7 @@ int DetectandPrintContinuousRanges(int currentsamplesarray[],int arraysize)
         consecutivecount=0;
      }  
   }
+  printnorangefound(rangecount);
   return rangecount;
   //TDD Step2 : Just added function to make code compile
   //end of step2 as expected test failed since actual code implementation not yet done : Assertion `DetectContinuousRanges(currentsamplesarray) == 2' failed.
