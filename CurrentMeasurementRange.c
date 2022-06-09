@@ -14,6 +14,12 @@ int isConsecutive(int diff)
    return consecutive;
 }
 
+void printrangedetails(int startvalue,int endvalue,int consecutivecount)
+{
+   printf("\nRange,Readings\n");
+   printf("%d-%d,  %d\n",startvalue,endvalue,consecutivecount+1);
+}
+
 int calculaterangecount(int consecutivecount,int rangecount,int startvalue,int endvalue,int index)
 {
    if(consecutivecount!=0)
@@ -23,12 +29,6 @@ int calculaterangecount(int consecutivecount,int rangecount,int startvalue,int e
       }
    return rangecount;
   }
-
-void printrangedetails(int startvalue,int endvalue,int consecutivecount)
-{
-   printf("\nRange,Readings\n");
-   printf("%d-%d,  %d\n",startvalue,endvalue,consecutivecount+1);
-}
 
 void printnorangefound(int rangecount)
 {
@@ -42,8 +42,8 @@ int DetectRangecountandPrintdetails(int currentsamplesarray[],int arraysize)
   //TDD Step3:Code Implementation done to make the test pass
   //as expected at end of step3 test case got passed
   qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
-  int rangecount=0,consecutivecount=0,startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0];
-  for( int index = 0 ; index < arraysize; index++ ) 
+  int rangecount=0,consecutivecount=0,startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0],index = 0;
+  for( index = 0 ; index < arraysize; index++ ) 
   {   
       int diff = currentsamplesarray[index+1] - currentsamplesarray[index];
       int isconsecutive=0;
