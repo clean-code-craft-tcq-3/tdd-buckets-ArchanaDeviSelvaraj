@@ -21,5 +21,9 @@ printf("\nTest case 4");
 int samplesarray3[] = {-3, -30, -5, -7, -10, -11, -12, 20, -6};
 int arraysize3 = sizeof(samplesarray3) / sizeof(samplesarray3[0]);
 assert(DetectRangecountandPrintdetails(samplesarray3,arraysize3) == 2);
+printf("\nTest case 5");
+int samplesarray4[] = {-2,-1,0,1,2,3,4,5};
+int arraysize4 = sizeof(samplesarray4) / sizeof(samplesarray4[0]);
+assert(DetectRangecountandPrintdetails(samplesarray3,arraysize3) == 1);
 return 0;
 }
