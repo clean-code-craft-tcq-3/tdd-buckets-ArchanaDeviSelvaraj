@@ -14,6 +14,13 @@ int isConsecutive(int diff)
    return consecutive;
 }
 
+void printrangedetails(int startvalue,int endvalue,int consecutivecount)
+{
+   printf("\nRange,Readings\n");
+   printf("%d-%d,  %d\n",startvalue,endvalue,consecutivecount+1);
+}
+                
+
 int DetectandPrintContinuousRanges(int currentsamplesarray[],int arraysize)
 {
   //TDD Step3:Code Implementation done to make the test pass
@@ -33,8 +40,7 @@ int DetectandPrintContinuousRanges(int currentsamplesarray[],int arraysize)
      else if(consecutivecount!=0)
      {
         rangecount++;
-        printf("\nRange,Readings\n");
-        printf("%d-%d,  %d\n",startvalue,endvalue,consecutivecount+1);
+        printrangedetails(startvalue,endvalue,consecutivecount);
         startvalue = currentsamplesarray[index+1];
         endvalue = currentsamplesarray[index];
         consecutivecount=0;
