@@ -34,7 +34,7 @@ int DetectandPrintContinuousRanges(int currentsamplesarray[],int arraysize)
      {
         rangecount++;
         printf("\nRange,Readings\n");
-        printf("  %d-%d, %d\n",startvalue,endvalue,consecutivecount+1);
+        printf("%d-%d,  %d\n",startvalue,endvalue,consecutivecount+1);
         startvalue = currentsamplesarray[index+1];
         endvalue = currentsamplesarray[index];
         consecutivecount=0;
