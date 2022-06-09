@@ -23,7 +23,7 @@ void printrangedetails(int startvalue,int endvalue,int consecutivecount)
 void printnorangefound(int rangecount)
 {
    if(rangecount==0)
-   printf("\n No Continuous Range detected");
+   printf("\nNo Continuous Range detected");
 }
                 
 
