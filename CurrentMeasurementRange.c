@@ -1,6 +1,9 @@
 #include "CurrentMeasurementRange.h"
 
-typedef struct Range {int startvalue; int endvalue; int rangecount} Range;
+typedef struct Range 
+{
+   int startvalue; int endvalue; int rangecount;
+} Range;
 
 int cmpfunc (const void * value1, const void * value2) 
 {
