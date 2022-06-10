@@ -25,7 +25,7 @@ void printRangeDetails(int startvalue,int endvalue,int consecutivecount)
    printf("%d - %d,  %d",startvalue,endvalue,consecutivecount+1);
 }
 
-int calculateRangeCount(int consecutivecount,int rangecount,int startvalue,int endvalue,int index)
+int calculateRangeCount(int consecutivecount,int rangecount,int startvalue,int endvalue)
 {
    if(consecutivecount!=0)
      {
