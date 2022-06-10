@@ -60,6 +60,6 @@ Range detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
         consecutivecount=0;
      }
   }
-  printNoRangeFound(rangecount);
+  printNoRangeFound(Rangeinfo.rangecount);
   return Rangeinfo;
 }
