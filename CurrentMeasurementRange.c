@@ -28,7 +28,7 @@ int detectEndValue(int currentsamplesarray[],int index)
 void printRangeDetails(int startvalue,int endvalue,int consecutivecount)
 {
    printf("\nRange,Readings\n");
-   printf("%d-%d,  %d",startvalue,endvalue,consecutivecount+1);
+   printf("%d - %d,  %d",startvalue,endvalue,consecutivecount+1);
 }
 
 int calculateRangeCount(int consecutivecount,int rangecount,int startvalue,int endvalue,int index)
