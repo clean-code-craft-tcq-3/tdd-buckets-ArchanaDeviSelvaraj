@@ -3,12 +3,10 @@
 
 int main()
 {
-//TDD Step 1: Write test code
 printf("Test case 1");
 int samplesarray[] = {4,5};
 int arraysize = sizeof(samplesarray) / sizeof(samplesarray[0]);
 assert(detectRangeCountAndPrintDetails(samplesarray,arraysize) == 1);
-//End of step 1 error observed as expected : error: ‘DetectContinuousRanges’ was not declared in this scope
 printf("\nTest case 2");
 int samplesarray1[] = {3, 3, 5, 4, 10, 11, 12};
 int arraysize1 = sizeof(samplesarray1) / sizeof(samplesarray1[0]);
