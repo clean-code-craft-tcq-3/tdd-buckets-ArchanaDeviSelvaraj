@@ -7,6 +7,7 @@ printf("Test case 1");
 int samplesarray[] = {4,5};
 int arraysize = sizeof(samplesarray) / sizeof(samplesarray[0]);
 assert(detectRangeCountAndPrintDetails(samplesarray,arraysize) == 1);
+detectStartValue(samplesarray,1);
 printf("\n\nTest case 2");
 int samplesarray1[] = {3, 3, 5, 4, 10, 11, 12};
 int arraysize1 = sizeof(samplesarray1) / sizeof(samplesarray1[0]);
