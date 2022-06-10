@@ -4,7 +4,6 @@ int cmpfunc (const void * value1, const void * value2)
 {
    return ( *(int*)value1 - *(int*)value2 );
 }
-//TDD Step4:New functions added to refactor code and to reduce CCN value
 
 int isConsecutive(int diff)
 {
@@ -39,8 +38,6 @@ void printNoRangeFound(int rangecount)
 
 int detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
 {
-  //TDD Step3:Code Implementation done to make the test pass
-  //as expected at end of step3 test case got passed
   qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
   int rangecount=0,consecutivecount=0,startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0],index = 0;
   for( index = 0 ; index < arraysize; index++ ) 
@@ -63,6 +60,4 @@ int detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
   }
   printNoRangeFound(rangecount);
   return rangecount;
-  //TDD Step2 : Just added function to make code compile
-  //end of step2 as expected test failed since actual code implementation not yet done : Assertion `DetectContinuousRanges(currentsamplesarray) == 2' failed.
 }
