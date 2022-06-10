@@ -15,7 +15,7 @@ int isConsecutive(int diff)
 
 int detectStartValue(int currentsamplesarray[],int index)
 {
-   int startvalue = currentsamplesarray[index+1];.
+   int startvalue = currentsamplesarray[index+1];
    return startvalue;
 }
 
