@@ -6,8 +6,8 @@ int main()
 printf("Test case 1");
 int samplesarray[] = {4,5};
 int arraysize = sizeof(samplesarray) / sizeof(samplesarray[0]);
-Rangeinfo[] = detectRangeCountAndPrintDetails(samplesarray,arraysize);
-assert(Rangeinfo[].rangecount == 1);
+Rangeinfo = detectRangeCountAndPrintDetails(samplesarray,arraysize);
+assert(Rangeinfo.rangecount == 1);
 assert(Rangeinfo[1].startvalue == 4);
 assert(Rangeinfo[1].endvalue == 5);  
 printf("\n\nTest case 2");
