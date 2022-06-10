@@ -3,6 +3,7 @@
 
 int main()
 {
+Range Rangeinfo[50];
 printf("Test case 1");
 int samplesarray[] = {4,5};
 int arraysize = sizeof(samplesarray) / sizeof(samplesarray[0]);
