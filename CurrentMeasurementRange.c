@@ -54,7 +54,7 @@ Range detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
      }
      else 
      {
-        Rangeinfo.rangecount = calculateRangeCount(consecutivecount,rangecount,startvalue,endvalue,index);
+        Rangeinfo.rangecount = calculateRangeCount(consecutivecount,rangecount,startvalue,endvalue);
         Rangeinfo.startvalue = currentsamplesarray[index+1];
         Rangeinfo.endvalue = currentsamplesarray[index];
         consecutivecount=0;
