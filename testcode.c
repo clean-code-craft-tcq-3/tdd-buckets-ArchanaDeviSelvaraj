@@ -15,7 +15,7 @@ printf("\n\nTest case 2");
 int samplesarray1[] = {3, 3, 5, 4, 10, 11, 12};
 int arraysize1 = sizeof(samplesarray1) / sizeof(samplesarray1[0]);
 Range RangeinfoOutput[arraysize1];
-RangeinfoOutput[arraysize] = detectRangeCountAndPrintDetails(samplesarray,arraysize);
+RangeinfoOutput[arraysize1] = detectRangeCountAndPrintDetails(samplesarray,arraysize);
 assert(RangeinfoOutput[arraysize1].rangecount == 2);
 assert(RangeinfoOutput[1].startvalue == 3);
 assert(RangeinfoOutput[1].endvalue == 5);  
