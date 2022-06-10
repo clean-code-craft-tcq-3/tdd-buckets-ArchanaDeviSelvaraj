@@ -3,14 +3,14 @@
 
 int main()
 {
-Range RangeinfoOutput;
 printf("Test case 1");
 int samplesarray[] = {4,5};
 int arraysize = sizeof(samplesarray) / sizeof(samplesarray[0]);
-RangeinfoOutput = detectRangeCountAndPrintDetails(samplesarray,arraysize);
+Range RangeinfoOutput[arraysize];
+RangeinfoOutput[arraysize] = detectRangeCountAndPrintDetails(samplesarray,arraysize);
 assert(RangeinfoOutput.rangecount == 1);
-assert(RangeinfoOutput.startvalue == 4);
-assert(RangeinfoOutput.endvalue == 5);  
+assert(RangeinfoOutput[RangeinfoOutput.rangecount].startvalue == 4);
+assert(RangeinfoOutput[RangeinfoOutput.rangecount].endvalue == 5);  
 printf("\n\nTest case 2");
 int samplesarray1[] = {3, 3, 5, 4, 10, 11, 12};
 int arraysize1 = sizeof(samplesarray1) / sizeof(samplesarray1[0]);
