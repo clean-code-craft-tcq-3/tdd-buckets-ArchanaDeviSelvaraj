@@ -3,7 +3,6 @@
 typedef struct Range 
 {
    int startvalue; int endvalue; int rangecount;
-} Range;
-Range Rangeinfo;
+} Range Rangeinfo;
 Range detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize);
 int isConsecutive(int diff);
