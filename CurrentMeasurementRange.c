@@ -1,5 +1,7 @@
 #include "CurrentMeasurementRange.h"
 
+typedef struct Range {int startvalue; int endvalue; int rangecount} Range;
+
 int cmpfunc (const void * value1, const void * value2) 
 {
    return ( *(int*)value1 - *(int*)value2 );
@@ -37,8 +39,9 @@ void printNoRangeFound(int rangecount)
 }
                 
 
-int detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
+Range detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
 {
+  Range Rangeinfo;
   qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
   int rangecount=0,consecutivecount=0,startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0],index = 0;
   for( index = 0 ; index < arraysize; index++ ) 
@@ -53,12 +56,12 @@ int detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
      }
      else 
      {
-        rangecount = calculateRangeCount(consecutivecount,rangecount,startvalue,endvalue,index);
-        startvalue = currentsamplesarray[index+1];
-        endvalue = currentsamplesarray[index];
+        Rangeinfo.rangecount = calculateRangeCount(consecutivecount,rangecount,startvalue,endvalue,index);
+        Rangeinfo.startvalue = currentsamplesarray[index+1];
+        Rangeinfo.endvalue = currentsamplesarray[index];
         consecutivecount=0;
      }
   }
   printNoRangeFound(rangecount);
-  return rangecount;
+  return Rangeinfo;
 }
