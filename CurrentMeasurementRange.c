@@ -57,12 +57,12 @@ int * detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
         rangecount = calculateRangeCount(consecutivecount,rangecount,startvalue,endvalue);
         Rangeinfo[rangecount][0] = startvalue;
         Rangeinfo[rangecount][1] = endvalue;
+        Rangeinfo[rangecount][2] = consecutivecount+1;
         startvalue = currentsamplesarray[index+1];
         endvalue = currentsamplesarray[index];
         consecutivecount=0;
      }
   }
-  Rangeinfo[rangecount][2] = consecutivecount;
   Rangeinfo[rangecount][3] = rangecount;
   printNoRangeFound(Rangeinfo[rangecount][2]);
   return &Rangeinfo[0][0];
