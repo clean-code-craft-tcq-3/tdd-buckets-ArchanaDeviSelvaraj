@@ -39,7 +39,7 @@ void printNoRangeFound(int rangecount)
 
 Range detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
 {
-  Range Rangeinfo[50];
+  Range Rangeinfo[]={};
   qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
   int rangecount=0,consecutivecount=0,startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0],index = 0;
   for( index = 0 ; index < arraysize; index++ ) 
@@ -64,5 +64,5 @@ Range detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
   }
   Rangeinfo[rangecount].rangecount = rangecount;
   printNoRangeFound(Rangeinfo[rangecount].rangecount);
-  return &Rangeinfo[50];
+  return Rangeinfo[];
 }
