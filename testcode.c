@@ -4,15 +4,15 @@
 int main()
 {
 int *ptr;
-int rangeinfo[100][3];
+int rangeinfo[100][4];
 printf("Test case 1");
 int samplesarray[] = {4,5};
 int arraysize = sizeof(samplesarray) / sizeof(samplesarray[0]);
 ptr = detectRangeCountAndPrintDetails(samplesarray,arraysize);
-printf("\n %d",*ptr);
-printf("\n %d",*(ptr+3));
-printf("\n %d",*(ptr+4));
-printf("\n %d",*(ptr+5));
+printf("\n %d",*ptr+4);
+printf("\n %d",*ptr+5);
+printf("\n %d",*ptr+6);
+printf("\n %d",*ptr+7);
 //assert(*(ptr+3) == 4);
 //assert(Rangeinfo[1]->startvalue == 4);
 //assert(Rangeinfo[1]->endvalue == 5);  
