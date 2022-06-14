@@ -55,14 +55,14 @@ Range detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
      else 
      {
         rangecount = calculateRangeCount(consecutivecount,rangecount,startvalue,endvalue);
-        Rangeinfo[rangecount]->startvalue = startvalue;
-        Rangeinfo[rangecount]->endvalue = endvalue;
+        Rangeinfo[rangecount].startvalue = startvalue;
+        Rangeinfo[rangecount].endvalue = endvalue;
         startvalue = currentsamplesarray[index+1];
         endvalue = currentsamplesarray[index];
         consecutivecount=0;
      }
   }
-  Rangeinfo[rangecount]->rangecount = rangecount;
-  printNoRangeFound(Rangeinfo[rangecount]->rangecount);
-  return &Rangeinfo;
+  Rangeinfo[rangecount].rangecount = rangecount;
+  printNoRangeFound(Rangeinfo[rangecount].rangecount);
+  return &Rangeinfo[50];
 }
