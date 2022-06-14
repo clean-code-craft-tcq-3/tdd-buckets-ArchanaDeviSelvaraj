@@ -4,11 +4,12 @@
 int main()
 {
 int *ptr;
+int rangeinfo[100][2];
 printf("Test case 1");
 int samplesarray[] = {4,5};
 int arraysize = sizeof(samplesarray) / sizeof(samplesarray[0]);
 ptr = detectRangeCountAndPrintDetails(samplesarray,arraysize);
-assert(*ptr[1][0]= 4);
+assert(*ptr+6 == 4);
 //assert(Rangeinfo[1]->startvalue == 4);
 //assert(Rangeinfo[1]->endvalue == 5);  
 printf("\n\nTest case 2");
