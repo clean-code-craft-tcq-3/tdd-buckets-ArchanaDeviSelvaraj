@@ -4,5 +4,5 @@ typedef struct Range
 {
    int startvalue; int endvalue; int rangecount;
 }Range;
-int* detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize);
+int * detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize);
 int isConsecutive(int diff);
