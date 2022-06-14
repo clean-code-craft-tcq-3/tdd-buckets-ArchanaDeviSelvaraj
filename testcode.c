@@ -10,7 +10,7 @@ int samplesarray[] = {4,5};
 int arraysize = sizeof(samplesarray) / sizeof(samplesarray[0]);
 ptr = detectRangeCountAndPrintDetails(samplesarray,arraysize);
 printf("\n %d",ptr);
-printf("\n %d",*ptr);
+printf("\n %d",*ptr+3);
 //assert(*(ptr+3) == 4);
 //assert(Rangeinfo[1]->startvalue == 4);
 //assert(Rangeinfo[1]->endvalue == 5);  
