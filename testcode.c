@@ -4,7 +4,7 @@
 int main()
 {
 int *ptr;
-int rangeinfo[100][2];
+int rangeinfo[100][3];
 printf("Test case 1");
 int samplesarray[] = {4,5};
 int arraysize = sizeof(samplesarray) / sizeof(samplesarray[0]);
