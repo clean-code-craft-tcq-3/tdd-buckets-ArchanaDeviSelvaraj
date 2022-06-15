@@ -73,5 +73,6 @@ int * detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
   }
   Rangeinfo[rangecount][3] = rangecount;
   printNoRangeFound(Rangeinfo[rangecount][3]);
+  printf ("\n %d", Rangeinfo[0][0]);
   return &Rangeinfo[0][0];
 }
