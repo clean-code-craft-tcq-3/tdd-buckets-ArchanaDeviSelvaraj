@@ -43,7 +43,7 @@ void printNoRangeFound(int rangecount)
 }
                 
 
-int * detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
+int * detectAndPrintRangeDetails(int currentsamplesarray[],int arraysize)
 {
   qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
   int rangecount=0,consecutivecount=0,startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0],index = 0;
