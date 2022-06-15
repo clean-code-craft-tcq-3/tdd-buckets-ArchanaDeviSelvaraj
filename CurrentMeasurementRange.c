@@ -1,10 +1,9 @@
 #include "CurrentMeasurementRange.h"
 
-int cmpfunc (const void * value1, const void * value2) 
+int cmpfunc(const void *a, const void *b)
 {
-   const int *A = value1, *B = value2;
+   const int *A = a, *B = b;
    return (*A > *B) - (*A < *B);
-   //return ( *(int*)value1 - *(int*)value2 );
 }
 
 int isConsecutive(int diff)
