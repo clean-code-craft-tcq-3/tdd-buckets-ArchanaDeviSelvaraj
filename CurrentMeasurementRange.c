@@ -2,7 +2,8 @@
 
 int cmpfunc (const void * value1, const void * value2) 
 {
-   return ( *(int*)value1 - *(int*)value2 );
+   return (*value1 > *value2) - (*value1 < *value2);
+   //return ( *(int*)value1 - *(int*)value2 );
 }
 
 int isConsecutive(int diff)
