@@ -46,10 +46,20 @@ printf("\n\nTest case 5");
 int samplesarray4[] = {-2,-1,0,1,2,3,4,5};
 int arraysize4 = sizeof(samplesarray4) / sizeof(samplesarray4[0]);
 ptr = detectRangeCountAndPrintDetails(samplesarray4,arraysize4);
+//Test case to check start of range
+assert(*(ptr+4) == -2);
+//Test case to check end of range
+assert(*(ptr+5) == 5);
+//Test case to check number of readings in the range
+assert(*(ptr+6) == 8);
+//Test case to check number of range detected
+assert(*(ptr+7) == 1);  
 printf("\n\nTest case 6");
 int samplesarray5[] = {};
 int arraysize5 = sizeof(samplesarray5) / sizeof(samplesarray5[0]);
-//assert(detectRangeCountAndPrintDetails(samplesarray5,arraysize5) == 0);
+ptr = assert(detectRangeCountAndPrintDetails(samplesarray5,arraysize5);
+//Test case to check number of range detected
+assert(*(ptr+3) == 0); 
   
 //Testcase to check isConsecutive fucntion
 assert(isConsecutive(0) == 1);
