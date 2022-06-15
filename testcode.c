@@ -48,13 +48,13 @@ int arraysize3 = sizeof(samplesarray3) / sizeof(samplesarray3[0]);
 ptr = detectRangeCountAndPrintDetails(samplesarray3,arraysize3); 
 //Test case to check start of range
 assert(*(ptr+4) == -12);
-//assert(*(ptr+8) == -7);
+assert(*(ptr+8) == -7);
 //Test case to check end of range
 assert(*(ptr+5) == -10);
-//assert(*(ptr+9) == -5);
+assert(*(ptr+9) == -5);
 //Test case to check number of readings in the range
 assert(*(ptr+6) == 3);
-//assert(*(ptr+10) == 3);
+assert(*(ptr+10) == 3);
 //Test case to check number of range detected
 assert(*(ptr+11) == 2); 
 
