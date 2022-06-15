@@ -8,7 +8,7 @@ int cmpfunc (const void * value1, const void * value2)
 int isConsecutive(int diff)
 {
    int consecutive = 0;
-   if((diff==0) || (abs(diff)==1)
+   if((diff==0) || (abs(diff)==1))
      consecutive=1;
    return consecutive;
 }
