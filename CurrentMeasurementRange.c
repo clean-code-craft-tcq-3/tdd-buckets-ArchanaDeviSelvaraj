@@ -42,10 +42,6 @@ int * detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
 {
   static int Rangeinfo[100][4];
   qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
-  for(int index = 0 ; index < arraysize; index++ ) 
-  {   
-      printf("\n %d", currentsamplesarray[index]);
-  }
   int rangecount=0,consecutivecount=0,startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0],index = 0;
   for( index = 0 ; index < arraysize; index++ ) 
   {   
@@ -70,6 +66,6 @@ int * detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
   }
   Rangeinfo[rangecount][3] = rangecount;
   printNoRangeFound(Rangeinfo[rangecount][3]);
-  //printf ("\n %d", Rangeinfo[2][0]);
+  printf ("\n %d", Rangeinfo[2][0]);
   return &Rangeinfo[0][0];
 }
