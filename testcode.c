@@ -57,7 +57,7 @@ assert(*(ptr+7) == 1);
 printf("\n\nTest case 6");
 int samplesarray5[] = {};
 int arraysize5 = sizeof(samplesarray5) / sizeof(samplesarray5[0]);
-ptr = assert(detectRangeCountAndPrintDetails(samplesarray5,arraysize5);
+ptr = detectRangeCountAndPrintDetails(samplesarray5,arraysize5);
 //Test case to check number of range detected
 assert(*(ptr+3) == 0); 
   
