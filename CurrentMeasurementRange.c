@@ -64,6 +64,6 @@ int * detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
      }
   }
   Rangeinfo[rangecount][3] = rangecount;
-  printNoRangeFound(Rangeinfo[rangecount][2]);
+  printNoRangeFound(Rangeinfo[rangecount][3]);
   return &Rangeinfo[0][0];
 }
