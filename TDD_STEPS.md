@@ -11,5 +11,7 @@
 
 
 Other info :
+
 Maximum count of continuous ranges that can be detected is assumed as 100
+
 If no consecutive range is found then range count is considered as 0
