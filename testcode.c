@@ -36,10 +36,6 @@ printf("\n\nTest case 3");
 int samplesarray2[] = {3, 30, 5, 7, 10, 15, 12, 20};
 int arraysize2 = sizeof(samplesarray2) / sizeof(samplesarray2[0]);
 ptr = detectRangeCountAndPrintDetails(samplesarray2,arraysize2);
-//Test case to check start of range
-assert(*(ptr+4) == 0);
-//Test case to check end of range
-assert(*(ptr+5) == 0);
 //Test case to check number of readings in the range
 assert(*(ptr+6) == 0);
 //Test case to check number of range detected
