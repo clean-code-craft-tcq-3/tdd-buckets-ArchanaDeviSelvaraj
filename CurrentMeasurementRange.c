@@ -50,7 +50,6 @@ int * detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
   for( index = 0 ; index < arraysize; index++ ) 
   {   
       int diff = currentsamplesarray[index+1] - currentsamplesarray[index];
-       printf("\n %d", diff);
       int isconsecutive=0;
       isconsecutive = isConsecutive(diff);
       if(isconsecutive==1)
