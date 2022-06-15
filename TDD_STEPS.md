@@ -8,3 +8,8 @@
 //as expected at end of step3 test case got passed
 
 //TDD Step4:New functions added to refactor code and to reduce CCN value
+
+
+Other info :
+Maximum count of continuous ranges that can be detected is assumed as 100
+If no consecutive range is found then range count is considered as 0
