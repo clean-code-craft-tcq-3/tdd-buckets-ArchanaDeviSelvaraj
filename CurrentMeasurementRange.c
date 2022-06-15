@@ -52,7 +52,9 @@ int * detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
   int rangecount=0,consecutivecount=0,startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0],index = 0;
   for( index = 0 ; index < arraysize; index++ ) 
   {   
+      printf("\n %d", currentsamplesarray[index]);
       int diff = currentsamplesarray[index+1] - currentsamplesarray[index];
+       printf("\n %d", diff);
       int isconsecutive=0;
       isconsecutive = isConsecutive(diff);
       if(isconsecutive==1)
@@ -73,6 +75,6 @@ int * detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
   }
   Rangeinfo[rangecount][3] = rangecount;
   printNoRangeFound(Rangeinfo[rangecount][3]);
-  printf ("\n %d", Rangeinfo[2][0]);
+  //printf ("\n %d", Rangeinfo[2][0]);
   return &Rangeinfo[0][0];
 }
