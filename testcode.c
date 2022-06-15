@@ -50,7 +50,7 @@ assert(*(ptr+5) == -10);
 //assert(*(ptr+9) == -5);
 //Test case to check number of readings in the range
 assert(*(ptr+6) == 3);
-assert(*(ptr+10) == 3);
+//assert(*(ptr+10) == 3);
 //Test case to check number of range detected
 assert(*(ptr+11) == 2); 
 printf("\n\nTest case 5");
