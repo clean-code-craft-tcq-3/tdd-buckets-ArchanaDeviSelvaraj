@@ -2,7 +2,8 @@
 
 int cmpfunc (const void * value1, const void * value2) 
 {
-   return (*value1 > *value2) - (*value1 < *value2);
+   const int *A = value1, *B = value2;
+   return (*A > *B) - (*A < *B);
    //return ( *(int*)value1 - *(int*)value2 );
 }
 
