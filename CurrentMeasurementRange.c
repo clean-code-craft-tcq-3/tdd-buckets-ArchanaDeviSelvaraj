@@ -1,5 +1,7 @@
 #include "CurrentMeasurementRange.h"
 
+static int Rangeinfo[100][4];
+
 int cmpfunc (const void * value1, const void * value2) 
 {
    return ( *(int*)value1 - *(int*)value2 );
@@ -27,6 +29,9 @@ int calculateRangeCount(int consecutivecount,int rangecount,int startvalue,int e
      {
         rangecount++;
         printRangeDetails(startvalue,endvalue,consecutivecount);
+        Rangeinfo[rangecount][0] = startvalue;
+        Rangeinfo[rangecount][1] = endvalue;
+        Rangeinfo[rangecount][2] = consecutivecount+1;
       }
    return rangecount;
   }
@@ -40,7 +45,6 @@ void printNoRangeFound(int rangecount)
 
 int * detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
 {
-  static int Rangeinfo[100][4];
   qsort(currentsamplesarray, arraysize, sizeof(int), cmpfunc);
   int rangecount=0,consecutivecount=0,startvalue=currentsamplesarray[0],endvalue=currentsamplesarray[0],index = 0;
   for( index = 0 ; index < arraysize; index++ ) 
@@ -56,9 +60,6 @@ int * detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
      else 
      {
         rangecount = calculateRangeCount(consecutivecount,rangecount,startvalue,endvalue);
-        Rangeinfo[rangecount][0] = startvalue;
-        Rangeinfo[rangecount][1] = endvalue;
-        Rangeinfo[rangecount][2] = consecutivecount+1;
         startvalue = currentsamplesarray[index+1];
         endvalue = currentsamplesarray[index];
         consecutivecount=0;
