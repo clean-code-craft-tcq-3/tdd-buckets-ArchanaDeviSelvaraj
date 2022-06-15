@@ -37,7 +37,7 @@ int samplesarray2[] = {3, 30, 5, 7, 10, 15, 12, 20};
 int arraysize2 = sizeof(samplesarray2) / sizeof(samplesarray2[0]);
 ptr = detectRangeCountAndPrintDetails(samplesarray2,arraysize2);
 //Test case to check number of range detected
-assert(*(ptr+7) == 0); 
+assert(*ptr == 0); 
 printf("\n\nTest case 4");
 int samplesarray3[] = {-3, -30, -5, -7, -10, -11, -12, 20, -6};
 int arraysize3 = sizeof(samplesarray3) / sizeof(samplesarray3[0]);
