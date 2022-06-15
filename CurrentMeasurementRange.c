@@ -16,7 +16,7 @@ int cmpfunc(const void* a, const void* b)
 int isConsecutive(int diff)
 {
    int consecutive = 0;
-   if((diff==0) || (abs(diff)==1))
+   if((diff==0) || (diff)==1)
      consecutive=1;
    return consecutive;
 }
@@ -73,6 +73,5 @@ int * detectRangeCountAndPrintDetails(int currentsamplesarray[],int arraysize)
   }
   Rangeinfo[rangecount][3] = rangecount;
   printNoRangeFound(Rangeinfo[rangecount][3]);
-  printf("\n %d", Rangeinfo[2][0]);
   return &Rangeinfo[0][0];
 }
