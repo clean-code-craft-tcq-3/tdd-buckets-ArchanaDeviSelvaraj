@@ -20,11 +20,18 @@ assert(*(ptr+7) == 1);
 printf("\n\nTest case 2");
 int samplesarray1[] = {3, 3, 5, 4, 10, 11, 12};
 int arraysize1 = sizeof(samplesarray1) / sizeof(samplesarray1[0]);
-//RangeinfoOutput[] = detectRangeCountAndPrintDetails(samplesarray,arraysize);
-//assert(RangeinfoOutput[].rangecount == 2);
-//assert(RangeinfoOutput[1].startvalue == 3);
-//assert(RangeinfoOutput[1].endvalue == 5);  
-//assert(detectRangeCountAndPrintDetails(samplesarray1,arraysize1) == 2);
+ptr = detectRangeCountAndPrintDetails(samplesarray1,arraysize1);
+//Test case to check start of range
+assert(*(ptr+4) == 3);
+assert(*(ptr+8) == 10);
+//Test case to check end of range
+assert(*(ptr+5) == 5);
+assert(*(ptr+9) == 12);
+//Test case to check number of readings in the range
+assert(*(ptr+6) == 4);
+assert(*(ptr+10) == 3);
+//Test case to check number of range detected
+assert(*(ptr+11) == 2);  
 printf("\n\nTest case 3");
 int samplesarray2[] = {3, 30, 5, 7, 10, 15, 12, 20};
 int arraysize2 = sizeof(samplesarray2) / sizeof(samplesarray2[0]);
