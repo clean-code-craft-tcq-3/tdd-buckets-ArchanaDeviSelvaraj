@@ -42,6 +42,17 @@ printf("\n\nTest case 4");
 int samplesarray3[] = {-3, -30, -5, -7, -10, -11, -12, 20, -6};
 int arraysize3 = sizeof(samplesarray3) / sizeof(samplesarray3[0]);
 detectRangeCountAndPrintDetails(samplesarray3,arraysize3); 
+//Test case to check start of range
+assert(*(ptr+4) == -12);
+//assert(*(ptr+8) == -7);
+//Test case to check end of range
+assert(*(ptr+5) == -10);
+assert(*(ptr+9) == -5);
+//Test case to check number of readings in the range
+assert(*(ptr+6) == 3);
+assert(*(ptr+10) == 3);
+//Test case to check number of range detected
+assert(*(ptr+11) == 2); 
 printf("\n\nTest case 5");
 int samplesarray4[] = {-2,-1,0,1,2,3,4,5};
 int arraysize4 = sizeof(samplesarray4) / sizeof(samplesarray4[0]);
