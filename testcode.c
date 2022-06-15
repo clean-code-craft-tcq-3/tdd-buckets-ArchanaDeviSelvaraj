@@ -8,7 +8,6 @@ int rangeinfo[100][4];
 printf("Test case 1");
 int samplesarray[] = {4,5};
 int arraysize = sizeof(samplesarray) / sizeof(samplesarray[0]);
-printf("\n Size : %d",arraysize);
 ptr = detectRangeCountAndPrintDetails(samplesarray,arraysize);
 //Test case to check start of range
 assert(*(ptr+4) == 4);
