@@ -23,7 +23,7 @@ void convertA2DToAmpereRange(int A2Dvaluearray[], int arraysize, int* Amperearra
    for(int index=0; index < arraysize; index++)
    {
      int Ampere = convertA2DToAmpere(maxAmp,A2Dvaluearray[index],bitresolution);
-      if(Ampere != invalid)
+      if(!(Ampere == invalid))
       {
          Amperearray[count] = Ampere;
          count++;
