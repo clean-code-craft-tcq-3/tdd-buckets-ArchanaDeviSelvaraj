@@ -84,5 +84,8 @@ assert(*(ptr+3) == 0);
 assert(isConsecutive(0) == 1);
 assert(isConsecutive(1) == 1);  
 assert(isConsecutive(5) == 0);
+  
+//Test case for conversion check
+int ampere = convertA2DToAmpere(10,1146,4094);
 return 0;
 }
