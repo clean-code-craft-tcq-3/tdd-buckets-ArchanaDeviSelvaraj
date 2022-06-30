@@ -1,5 +1,6 @@
 #include <assert.h>
 #include "CurrentMeasurementRange.h"
+#include "AnalogToDigitalConversion.h"
 
 int main()
 {
