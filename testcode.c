@@ -86,6 +86,6 @@ assert(isConsecutive(1) == 1);
 assert(isConsecutive(5) == 0);
   
 //Test case for conversion check
-assert(convertA2DToAmpere(10,1146,4094) == 3);
+convertA2DToAmpere(10,1146,12);
 return 0;
 }
