@@ -94,7 +94,7 @@ assert(convertA2DToAmpere(10,4094,12) == 10);
 int A2Dvaluearray[] = {1146,4094};
 int A2Darraysize = sizeof(A2Dvaluearray) / sizeof(A2Dvaluearray[0]);  
 int Amperearray[] = {};
-convertA2DToAmpereRange(A2Dvaluearray,arraysize,*Amperearray,10,12);
+convertA2DToAmpereRange(A2Dvaluearray,arraysize,Amperearray,10,12);
 ptr = detectAndPrintRangeDetails(Amperearray,A2Darraysize);
 //Test case to check start of range
 //assert(*(ptr+4) == -2);
