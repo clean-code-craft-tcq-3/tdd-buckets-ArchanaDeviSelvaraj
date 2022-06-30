@@ -95,18 +95,18 @@ printf("\n\nTest case 7");
 int A2Dvaluearray[] = {1146,4094};
 int A2Darraysize = sizeof(A2Dvaluearray) / sizeof(A2Dvaluearray[0]);  
 int Amperearray[] = {};
-convertA2DToAmpereRange(A2Dvaluearray,arraysize,Amperearray,10,12);
+convertA2DToAmpereRange(A2Dvaluearray,A2Darraysize,Amperearray,10,12);
 ptr = detectAndPrintRangeDetails(Amperearray,A2Darraysize);
 //Test case to check number of range detected
 assert(*(ptr+3) == 0);   
   
 //Test case for ampere value range check
 printf("\n\nTest case 8");
-int A2Dvaluearray[] = {1146,1400,4094};
-int A2Darraysize = sizeof(A2Dvaluearray) / sizeof(A2Dvaluearray[0]);  
-int Amperearray[] = {};
-convertA2DToAmpereRange(A2Dvaluearray,arraysize,Amperearray,10,12);
-ptr = detectAndPrintRangeDetails(Amperearray,A2Darraysize);
+int A2Dvaluearray1[] = {1146,1400,4094};
+int A2Darraysize1 = sizeof(A2Dvaluearray1) / sizeof(A2Dvaluearray1[0]);  
+int Amperearray1[] = {};
+convertA2DToAmpereRange(A2Dvaluearray1,A2Darraysize1,Amperearray1,10,12);
+ptr = detectAndPrintRangeDetails(Amperearray1,A2Darraysize1);
 //Test case to check number of range detected
 //assert(*(ptr+3) == 0);   
 return 0;
