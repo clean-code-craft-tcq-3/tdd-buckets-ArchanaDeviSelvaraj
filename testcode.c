@@ -97,13 +97,7 @@ int A2Darraysize = sizeof(A2Dvaluearray) / sizeof(A2Dvaluearray[0]);
 int Amperearray[] = {};
 convertA2DToAmpereRange(A2Dvaluearray,arraysize,Amperearray,10,12);
 ptr = detectAndPrintRangeDetails(Amperearray,A2Darraysize);
-//Test case to check start of range
-//assert(*(ptr+4) == -2);
-//Test case to check end of range
-//assert(*(ptr+5) == 5);
-//Test case to check number of readings in the range
-//assert(*(ptr+6) == 8);
 //Test case to check number of range detected
-//assert(*(ptr+7) == 1);    
+assert(*(ptr+3) == 0);   
 return 0;
 }
