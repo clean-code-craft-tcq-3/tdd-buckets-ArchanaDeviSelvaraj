@@ -4,6 +4,8 @@
 
 #define invalid -1;
 
+int Amperearray[] = {};
+
 int convertA2DToAmpere(int maxAmp,int A2Dvalue,int bitresolution)
 {
    int Ampere = invalid;
