@@ -1,5 +1,5 @@
 #include <math.h>
-#include <stdio.h>.
+#include <stdio.h>
 #include "AnalogToDigitalConversion.h"
 
 #define invalid -1;
@@ -16,7 +16,7 @@ int convertA2DToAmpere(int maxAmp,int A2Dvalue,int bitresolution)
    return Ampere;
 }
 
-void convertA2DToAmpereRange(int A2Dvaluearray[], int arraysize, int *Amperearray)
+void convertA2DToAmpereRange(int A2Dvaluearray[], int arraysize, int *Amperearray, int maxAmp, int bitresolution)
 {
    for(int index=0; index < arraysize; index++)
    {
