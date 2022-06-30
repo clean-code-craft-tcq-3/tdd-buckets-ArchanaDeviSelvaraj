@@ -15,12 +15,10 @@ int convertA2DToAmpere(int maxAmp,int A2Dvalue,int bitresolution)
    return Ampere;
 }
 
-int convertA2DToAmpereRange(int A2Dvaluearray, int arraysize)
+void convertA2DToAmpereRange(int A2Dvaluearray, int arraysize, int *Amperearray)
 {
-   int Amperearray[arraysize];
    for(int index=0; index < arraysize; index++)
    {
       Amperearray[index] = convertA2DToAmpere(A2Dvaluearray[index]);
    }
-   return Amperearray;
 }
