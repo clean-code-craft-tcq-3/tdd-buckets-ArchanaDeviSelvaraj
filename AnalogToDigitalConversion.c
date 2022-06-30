@@ -1,5 +1,6 @@
 #include <math.h>
-#include <stdio.h>
+#include <stdio.h>.
+#include "AnalogToDigitalConversion.h"
 
 #define invalid -1;
 
