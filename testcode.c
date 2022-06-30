@@ -91,6 +91,7 @@ assert(convertA2DToAmpere(10,4095,12) == -1);
 assert(convertA2DToAmpere(10,4094,12) == 10);
   
 //Test case for ampere value range check
+printf("\n\nTest case 7");
 int A2Dvaluearray[] = {1146,4094};
 int A2Darraysize = sizeof(A2Dvaluearray) / sizeof(A2Dvaluearray[0]);  
 int Amperearray[] = {};
