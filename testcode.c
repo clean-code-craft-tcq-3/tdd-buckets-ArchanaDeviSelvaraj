@@ -118,15 +118,15 @@ assert(*(ptr+7) == 1);
   
 //Test case for ampere value range check
 printf("\n\nTest case 9");
-int A2Dvaluearray2[] = {-1146,-1600,-4094};
+int A2Dvaluearray2[] = {-1000,-1146,-4094};
 int A2Darraysize2 = sizeof(A2Dvaluearray2) / sizeof(A2Dvaluearray2[0]);  
 int Amperearray2[] = {};
 convertA2DToAmpereRange(A2Dvaluearray2,A2Darraysize2,Amperearray2,10,12);
 ptr = detectAndPrintRangeDetails(Amperearray2,A2Darraysize2);
 //Test case to check start of range
-assert(*(ptr+4) == 3);
+assert(*(ptr+4) == 2);
 //Test case to check end of range
-assert(*(ptr+5) == 4);
+assert(*(ptr+5) == 3);
 //Test case to check number of readings in the range
 assert(*(ptr+6) == 2);
 //Test case to check number of range detected
