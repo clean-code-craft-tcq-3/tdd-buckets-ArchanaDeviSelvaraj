@@ -40,8 +40,8 @@ Range, Readings
 
 Establish quality parameters: 
 
-- What is the maximum complexity (CCN) per function? _enter CCN and create corresponding yml in the `.github/workflows` folder
-- How many lines of duplicate code will you tolerate? _enter the number of lines and create corresponding yml in the `.github/workflows` folder
+- What is the maximum complexity (CCN) per function? 3 (The limit per function is set at 3) CCN and create corresponding yml in the `.github/workflows` folder
+- How many lines of duplicate code will you tolerate? 2 (Fails on finding duplication of 3 lines or more) the number of lines and create corresponding yml in the `.github/workflows` folder
 - Ensure 100% line and branch coverage at every step. Include the coverage yml in the workflows.
 
 Adapt/adopt/extend the `yml` files from one of your previous workflow folders.
