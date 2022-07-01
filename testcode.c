@@ -133,11 +133,11 @@ assert(*(ptr+6) == 2);
 assert(*(ptr+7) == 1);
   
 printf("\n\nTest case 10");
-int A2Dvaluearray[] = {4095};
-int A2Darraysize = sizeof(A2Dvaluearray) / sizeof(A2Dvaluearray[0]);  
-int Amperearray[] = {};
-convertA2DToAmpereRange(A2Dvaluearray,A2Darraysize,Amperearray,10,12);
-ptr = detectAndPrintRangeDetails(Amperearray,A2Darraysize);
+int A2Dvaluearray3[] = {4095};
+int A2Darraysize3 = sizeof(A2Dvaluearray3) / sizeof(A2Dvaluearray3[0]);  
+int Amperearray3[] = {};
+convertA2DToAmpereRange(A2Dvaluearray3,A2Darraysize3,Amperearray3,10,12);
+ptr = detectAndPrintRangeDetails(Amperearray3,A2Darraysize3);
 //Test case to check number of range detected
 assert(*(ptr+3) == 0); 
   
